@@ -12,6 +12,8 @@ import { ReservationComponent } from './reservation/reservation.component';
 import { FooterComponent } from './footer/footer.component';
 import { TimelineComponent } from './timeline/timeline.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ParametrosService } from './core/services/parametros.service';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -28,9 +30,12 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ],
   imports: [
     BrowserModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    ParametrosService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
