@@ -1,1 +1,91 @@
-/* You can add global styles to this file, and also import other style files */
+#headerMenu {
+    position: relative;
+    width: 100%;
+    /* z-index: 199 !important; */
+    height: 60px;
+    line-height: 60px;
+}
+
+#headerMenu.header-sticky.sticky-active .header-inner,
+#headerMenu.header-sticky.sticky-active #headerMenu-wrap {
+    box-shadow: 0 12px 6px rgba(0,0,0,0.06);
+  top: 0;
+  position: fixed;
+  margin: 0 auto;
+  width: 100%;
+}
+
+#headerMenu.header-sticky .header-inner,
+#headerMenu.header-sticky #headerMenu-wrap {
+  transition: top 0.8s ease-in-out;
+  top: -140px;
+}
+
+#headerMenu .header-inner,
+#headerMenu #headerMenu-wrap {
+  /* height: 80px; */
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  transition: all 0.4s ease-in-out;
+  /* min-height: 937px; */
+}
+
+#headerMenu .container {
+  position: relative;
+}
+
+#navbarMenu {
+  padding: 0;
+}
+
+#navbarMenu .container {
+  position: relative;
+}
+
+#navbarMenu > .container {
+  padding: 0 !important;
+}
+
+#navbarMenu.menu-center nav {
+  float: none;
+  display: inline-block;
+  vertical-align: top;
+  padding-top: 13px;
+}
+
+#navbarMenu.menu-center > .container {
+  float: none !important;
+  text-align: center;
+}
+
+#navbarMenu nav > ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#navbarMenu nav > ul > li {
+  float: left;
+  border: 0;
+  transition: all 0.3s ease;
+  margin-left: 6px;
+  position: relative;
+}
+
+#navbarMenu nav > ul > li > a {
+  position: relative;
+  font-family: "Poppins", sans-serif;
+  padding: 10px 12px;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #000;
+  border-radius: 0;
+  border-width: 0;
+  border-style: solid;
+  border-color: transparent;
+  transition: all 0.3s ease;
+  line-height: normal;
+}

@@ -11,6 +11,7 @@ import { MapsComponent } from './maps/maps.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { FooterComponent } from './footer/footer.component';
 import { TimelineComponent } from './timeline/timeline.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TimelineComponent } from './timeline/timeline.component';
     TimelineComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
