@@ -1,78 +1,27 @@
 <section id="section4"
-    style="background-image:url(assets/wedding/images/shape-left-top.png); background-position:top left; background-repeat:no-repeat;">
-    <div class="container">
-        <div class="heading-text text-center">
-            <h2 class="m-t-40 m-b-40">Nuestra historia de amor</h2>
-            <p class="lead">
-                Our love story begun on a Sunday night. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                exercitation ullamco laboris nisi ut aliquip ex
-                ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-                fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
-                deserunt
-            </p>
-        </div>
-
-        <!-- Timeline -->
-        <ul class="timeline">
-            <!--Timeline item-->
-            <li class="timeline-item">
-                <div class="timeline-icon"><i class="icon-heart"></i></div>
-                <h4>Our days</h4>
-                <div class="timeline-item-date">21 January, 2021</div>
-                <h2>Day we meet each other</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
-            </li>
-            <!--end: Timeline item-->
-            <!--Timeline item-->
-            <li class="timeline-item">
-                <div class="timeline-icon"><i class="icon-heart"></i></div>
-                <div class="timeline-item-date">10 June 2021</div>
-                <h2>Our first kiss</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
-            </li>
-            <!--end: Timeline item-->
-            <!--Timeline item-->
-            <li class="timeline-item">
-                <div class="timeline-icon"><i class="icon-life-buoy"></i></div>
-                <div class="timeline-item-date">10 June 2021</div>
-                <h2>Our first trip</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
-            </li>
-            <!--end: Timeline item-->
-            <!--Timeline item-->
-            <li class="timeline-item">
-                <div class="timeline-icon"><i class="icon-box"></i></div>
-                <div class="timeline-item-date">12 June 2021</div>
-                <h2>Our Engagement</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
-            </li>
-            <!--end: Timeline item-->
-            <!--Timeline item-->
-            <li class="timeline-item">
-                <div class="timeline-icon"><i class="icon-shield"></i></div>
-
-                <div class="timeline-item-date">14 October 2021</div>
-                <h2>Our Wedding Day</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat.
-                </p>
-
-            </li>
-            <!--end: Timeline item-->
-        </ul>
+  style="background-image:url(assets/wedding/images/shape-left-top.png); background-position:top left; background-repeat:no-repeat;">
+  <div class="container">
+    <div class="heading-text text-center">
+      <h2 class="m-t-40 m-b-40">Nuestra historia de amor</h2>
+      <p class="lead">
+        {{resumenAmor.valor}}
+      </p>
     </div>
+
+    <!-- Timeline -->
+    <ul class="timeline">
+
+      <li class="timeline-item" *ngFor="let line of timelines">
+        <div class="timeline-icon"><i [className]="line.icono"></i></div>
+        <div class="timeline-item-date">{{ line.fecha | date: 'short': 'M/d/yy' }}</div>
+        <h2>{{ line.titulo }}</h2>
+        <p>
+          {{line.descripcion}}
+        </p>
+      </li>
+
+
+      <!--end: Timeline item-->
+    </ul>
+  </div>
 </section>

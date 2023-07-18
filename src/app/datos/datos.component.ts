@@ -18,7 +18,6 @@ export class DatosComponent implements OnInit {
       if (data.length > 0) {
         this.datosNovia = data[0];
       }
-
     });
 
     this.parametroService.get('NOMBRES_NOVIO').subscribe((data: ParametroDto[]) => {

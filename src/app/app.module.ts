@@ -14,6 +14,9 @@ import { TimelineComponent } from './timeline/timeline.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ParametrosService } from './core/services/parametros.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { GalleryService } from './core/services/gallery.service';
+import { SliderService } from './core/services/slider.service';
+import { TimeLineService } from './core/services/time-line.service';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     HttpClientModule
   ],
   providers: [
-    ParametrosService
+    ParametrosService,
+    GalleryService,
+    SliderService,
+    TimeLineService
   ],
   bootstrap: [AppComponent]
 })
