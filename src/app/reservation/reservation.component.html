@@ -1,0 +1,53 @@
+<section id="section7"
+    style="background-image:url(assets/wedding/images/shape-right-bottom.png); background-position:bottom right; background-repeat:no-repeat;">
+    <div class="container">
+        <div class="heading-text text-center m-b-20">
+            <h2>RSVP</h2>
+            <p class="lead">
+                Please don't forget to be present at the Wedding :)
+            </p>
+        </div>
+        <form action="include/contact-form-reservation.php" role="form" method="post"
+            class="widget-contact-form form-grey-fields text-center">
+            <div class="row">
+                <div class="col-lg-6 center">
+                    <div class="form-group">
+                        <input type="text" aria-required="true" name="widget-contact-form-name"
+                            class="form-control required name" placeholder="Enter your Name">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" aria-required="true" required name="widget-contact-form-email"
+                            class="form-control required email" placeholder="Enter your Email">
+                    </div>
+                    <div class="form-group">
+                        <select class="form-select" name="widget-contact-form-guests">
+                            <option value="Wedding Ceremony">Guests</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select class="form-select" name="widget-contact-form-events">
+                            <option value="Wedding Ceremony">Wedding Ceremony</option>
+                            <option value="Reception">Reception</option>
+                            <option value="All Events">All Events</option>
+                            <option value="Not Attending">Not Attending</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <button class="btn btn-primary" type="submit" id="form-submit"><i
+                                class="fa fa-paper-plane"></i>&nbsp;Submit</button>
+                    </div>
+                </div>
+            </div>
+
+        </form>
+
+
+    </div>
+</section>
