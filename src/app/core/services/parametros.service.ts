@@ -1,8 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http'
 import { ParametroDto } from '../dtos/parametro.dto';
-
-const URI_API = 'http://localhost:3000'
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +9,7 @@ const URI_API = 'http://localhost:3000'
 export class ParametrosService {
   private urlApi: string;
   constructor(private httpCliente: HttpClient) {
-    this.urlApi = URI_API + '/parametro';
+    this.urlApi = environment.apiUrl + '/parametro';
   }
 
   get(codigo: string) {
