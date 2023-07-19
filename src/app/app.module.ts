@@ -17,6 +17,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { GalleryService } from './core/services/gallery.service';
 import { SliderService } from './core/services/slider.service';
 import { TimeLineService } from './core/services/time-line.service';
+import { WeddingService } from './core/services/wedding.service';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { TimeLineService } from './core/services/time-line.service';
     ParametrosService,
     GalleryService,
     SliderService,
-    TimeLineService
+    TimeLineService,
+    WeddingService
   ],
   bootstrap: [AppComponent]
 })

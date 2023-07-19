@@ -14,7 +14,7 @@ export class TimeLineService {
 
   get() {
     const url = `${this.urlApi}/`;
-    console.log(url);
+    // console.log(url);
     return this.httpCliente.get<TimeLineDto[]>(url);
   }
 }

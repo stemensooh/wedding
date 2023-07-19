@@ -14,7 +14,7 @@ export class ParametrosService {
 
   get(codigo: string) {
     const url = `${this.urlApi}/${codigo}`;
-    console.log(url);
+    // console.log(url);
     return this.httpCliente.get<ParametroDto[]>(url);
   }
 }
