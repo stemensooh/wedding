@@ -14,9 +14,7 @@ export class GalleryComponent implements OnChanges {
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['wedding'].currentValue) {
       const wedding = changes['wedding'].currentValue as WeddingResponseDto;
-
       this.fotos = wedding.galleries;
-
     }
   }
 }

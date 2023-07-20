@@ -1,7 +1,4 @@
-import { AfterContentInit, AfterViewInit, Component, Input } from '@angular/core';
-import { ParametroDto } from '../core/dtos/parametro.dto';
-import { ParametrosService } from '../core/services/parametros.service';
-import { TimeLineService } from '../core/services/time-line.service';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import {
   TimelineDto,
   WeddingResponseDto,
@@ -12,18 +9,19 @@ import {
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.css'],
 })
-export class TimelineComponent implements AfterContentInit {
+export class TimelineComponent implements OnChanges {
   @Input() wedding!: WeddingResponseDto;
 
-  timelines!: TimelineDto[];
+  timelines: TimelineDto[] = [];
+  mensaje: string = '';
 
-  constructor() {
-    
+  constructor() {}
+
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['wedding'].currentValue) {
+      const wedding = changes['wedding'].currentValue as WeddingResponseDto;
+      this.timelines = wedding.timelines;
+      this.mensaje = wedding.mensaje;
+    }
   }
-
-  ngAfterContentInit(): void {
-    this.timelines = this.wedding?.timelines;
-  }
-
-
 }
