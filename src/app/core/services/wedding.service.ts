@@ -17,9 +17,13 @@ export class WeddingService {
     return this.httpCliente.get<WeddingResponseDto[]>(url);
   }
 
-  
   getId(id: string) {
     const url = `${this.urlApi}/${id}`;
+    return this.httpCliente.get<WeddingResponseDto>(url);
+  }
+
+  getTitulo(titulo: string) {
+    const url = `${this.urlApi}/titulo/${titulo}`;
     return this.httpCliente.get<WeddingResponseDto>(url);
   }
 

@@ -18,7 +18,7 @@ export class WeddingComponent {
   ) {
     this._router.params.subscribe((params) => {
       this.weddingService
-        .getId(params['id'])
+        .getTitulo(params['titulo'])
         .subscribe((data: WeddingResponseDto) => {
           this.wedding = data;
           console.log(this.wedding);

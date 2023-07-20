@@ -4,7 +4,7 @@ import { WeddingComponent } from './wedding/wedding.component';
 
 const routes: Routes = [
   { path: '', component: WeddingComponent },
-  { path: ':id', component: WeddingComponent },
+  { path: ':titulo', component: WeddingComponent },
   { path: '', pathMatch: 'full', redirectTo: '' },
   { path: '**', pathMatch: 'full', redirectTo: '' },
 ];
