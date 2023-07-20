@@ -6,92 +6,18 @@
         </div>
 
         <div class="portfolio">
-
-
             <div id="portfolio" class="grid-4-columns" data-margin="10" data-lightbox="gallery" data-item="grid-item">
-
-                <div class="wedding-gallery-item grid-item">
-                    <a title="Your image title here!" data-lightbox="gallery-image"
-                        href="assets/wedding/images/gallery/1.jpg">
-                        <img src="assets/wedding/images/gallery/1.jpg" alt="">
-                        <div class="picture-legend">Happy moments!</div>
+                <div *ngFor="let foto of fotos" class="wedding-gallery-item grid-item">
+                    <a [title]="foto.titulo" data-lightbox="gallery-image"
+                        [href]="foto.foto">
+                        <img [src]="foto.foto" alt="">
+                        <div class="picture-legend">
+                            {{foto.titulo}}
+                        </div>
                         <div class="mask"></div>
                     </a>
                 </div>
-
-                <div class="wedding-gallery-item large-width grid-item">
-                    <a title="Your image title here!" data-lightbox="gallery-image"
-                        href="assets/wedding/images/gallery/2.jpg">
-                        <img src="assets/wedding/images/gallery/2.jpg" alt="">
-                        <div class="picture-legend">Bride & Groom!</div>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-
-                <div class="wedding-gallery-item grid-item">
-                    <a title="Your image title here!" data-lightbox="gallery-image"
-                        href="assets/wedding/images/gallery/3.jpg">
-                        <img src="assets/wedding/images/gallery/3.jpg" alt="">
-                        <div class="picture-legend">Father & Bride!</div>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <div class="wedding-gallery-item grid-item">
-                    <a title="Your image title here!" data-lightbox="gallery-image"
-                        href="assets/wedding/images/gallery/4.jpg">
-                        <img src="assets/wedding/images/gallery/4.jpg" alt="">
-                        <div class="picture-legend">Lovely flowers</div>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-
-                <div class="wedding-gallery-item grid-item">
-                    <a title="Your image title here!" data-lightbox="gallery-image"
-                        href="assets/wedding/images/gallery/5.jpg">
-                        <img src="assets/wedding/images/gallery/5.jpg" alt="">
-                        <div class="picture-legend">Together now, and forever</div>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-
-                <div class="wedding-gallery-item grid-item">
-                    <a title="Your image title here!" data-lightbox="gallery-image"
-                        href="assets/wedding/images/gallery/6.jpg">
-                        <img src="assets/wedding/images/gallery/6.jpg" alt="">
-                        <div class="picture-legend">Bride Mother!</div>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <div class="wedding-gallery-item grid-item">
-                    <a title="Your image title here!" data-lightbox="gallery-image"
-                        href="assets/wedding/images/gallery/7.jpg">
-                        <img src="assets/wedding/images/gallery/7.jpg" alt="">
-                        <div class="picture-legend">That's Funny!</div>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-                <div class="wedding-gallery-item grid-item">
-                    <a title="Your image title here!" data-lightbox="gallery-image"
-                        href="assets/wedding/images/gallery/8.jpg">
-                        <img src="assets/wedding/images/gallery/8.jpg" alt="">
-                        <div class="picture-legend">Flowers!</div>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-
-                <div class="wedding-gallery-item grid-item">
-                    <a title="Your image title here!" data-lightbox="gallery-image"
-                        href="assets/wedding/images/gallery/9.jpg">
-                        <img src="assets/wedding/images/gallery/9.jpg" alt="">
-                        <div class="picture-legend">My brother with his family</div>
-                        <div class="mask"></div>
-                    </a>
-                </div>
-
-
-
             </div>
-            <!-- end: Portfolio Items -->
         </div>
     </div>
 </section>

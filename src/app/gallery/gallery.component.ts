@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnChanges, SimpleChanges } from '@angular/core';
 import { GalleryDto, WeddingResponseDto } from '../core/dtos/wedding-response.dto';
 
 @Component({
@@ -6,7 +6,17 @@ import { GalleryDto, WeddingResponseDto } from '../core/dtos/wedding-response.dt
   templateUrl: './gallery.component.html',
   styleUrls: ['./gallery.component.css']
 })
-export class GalleryComponent {
+export class GalleryComponent implements OnChanges {
+  
   @Input() wedding!: WeddingResponseDto;
+  fotos: GalleryDto[] = [];
 
+  ngOnChanges(changes: SimpleChanges): void {
+    if (changes['wedding'].currentValue) {
+      const wedding = changes['wedding'].currentValue as WeddingResponseDto;
+
+      this.fotos = wedding.galleries;
+
+    }
+  }
 }
