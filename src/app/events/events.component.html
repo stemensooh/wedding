@@ -4,31 +4,21 @@
         <div class="heading-text text-center m-b-80">
             <h2>Calendario de eventos</h2>
             <p class="lead">
-                Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+                <!-- Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt -->
             </p>
         </div>
 
         <div class="row">
-            <div class="col-lg-4 wedding-event">
-                <h3 class="text-colored m-b-0">Cocktail Party</h3>
-                <h5>10, Jun 2015 at 22:00</h5>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-            <div class="col-lg-4 wedding-event">
-                <h3 class="text-colored m-b-0">Wedding Ceremony</h3>
-                <h5>10, Jun 2015 at 22:00</h5>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident cillum dolore eu fugiat nulla pariatur.
-                </p>
-            </div>
-            <div class="col-lg-4">
-                <h3 class="text-colored m-b-0">After Wedding Party</h3>
-                <h5>10, Jun 2015 at 22:00</h5>
-                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident cillum dolore eu fugiat nulla pariatur.
+            <div *ngFor="let evento of eventos" class="col-lg-4 wedding-event">
+                <h3 class="text-colored m-b-0">
+                    {{evento.titulo}}
+                </h3>
+                <h5>
+                    {{evento.fecha | date : 'short'}}
+                </h5>
+                <p>
+                    {{evento.descripcion}}
                 </p>
             </div>
         </div>

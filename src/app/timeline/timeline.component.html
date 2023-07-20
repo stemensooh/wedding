@@ -13,7 +13,7 @@
 
       <li class="timeline-item" *ngFor="let line of timelines">
         <div class="timeline-icon"><i [className]="line.icono"></i></div>
-        <div class="timeline-item-date">{{ line.fecha | date: 'short': 'M/d/yy' }}</div>
+        <div class="timeline-item-date">{{ line.fecha | date }}</div>
         <h2>{{ line.titulo }}</h2>
         <p>
           {{line.descripcion}}
