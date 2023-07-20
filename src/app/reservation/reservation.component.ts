@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { WeddingResponseDto } from '../core/dtos/wedding-response.dto';
 
 @Component({
   selector: 'app-reservation',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./reservation.component.css']
 })
 export class ReservationComponent {
-
+  @Input() wedding!: WeddingResponseDto;
 }

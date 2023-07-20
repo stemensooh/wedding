@@ -1,0 +1,35 @@
+<!--HEADER-->
+<app-header></app-header>
+<!--END: HEADER-->
+
+<!-- SLIDESHOW SLIDER -->
+<app-slider [wedding]="(wedding ? wedding : undefined)"></app-slider>
+<!-- end: SLIDESHOW SLIDER -->
+
+<!-- GROOM & BRIDE -->
+<app-datos [cupler]=" (wedding ? wedding.cupler : [] ) | cupler"></app-datos>
+<!-- end: GROOM & BRIDE -->
+
+<!-- GALLERY -->
+<app-gallery [wedding]="wedding"></app-gallery>
+<!-- end: GALLERY -->
+
+<!-- TIMELINE -->
+<app-timeline [wedding]="wedding"></app-timeline>
+<!-- end: TIMELINE -->
+
+<!-- EVENTS -->
+<app-events [wedding]="wedding"></app-events>
+<!-- end: EVENTS -->
+
+<!-- MAP -->
+<app-maps [wedding]="wedding"></app-maps>
+<!-- end: MAP -->
+
+<!-- RESERVATION -->
+<app-reservation [wedding]="wedding"></app-reservation>
+<!-- end: RESERVATION -->
+
+<!-- Footer -->
+<app-footer></app-footer>
+<!-- end: Footer -->

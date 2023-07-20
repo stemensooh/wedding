@@ -1,37 +1,29 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, AfterViewInit, Component, Input } from '@angular/core';
 import { ParametroDto } from '../core/dtos/parametro.dto';
 import { ParametrosService } from '../core/services/parametros.service';
 import { TimeLineService } from '../core/services/time-line.service';
-import { TimeLineDto } from '../core/dtos/time-line.dto';
+import {
+  TimelineDto,
+  WeddingResponseDto,
+} from '../core/dtos/wedding-response.dto';
 
 @Component({
   selector: 'app-timeline',
   templateUrl: './timeline.component.html',
   styleUrls: ['./timeline.component.css'],
 })
-export class TimelineComponent {
-  resumenAmor: ParametroDto = new ParametroDto();
-  timelines: TimeLineDto[] = [];
+export class TimelineComponent implements AfterContentInit {
+  @Input() wedding!: WeddingResponseDto;
 
-  constructor(
-    private parametroService: ParametrosService,
-    private timeLineService: TimeLineService
-  ) {
-    this.parametroService
-      .get('RESUMEN_HISTORIA_AMOR')
-      .subscribe((data: ParametroDto[]) => {
-        console.log(data);
-        if (data.length > 0) {
-          this.resumenAmor = data[0];
-        }
-      });
+  timelines!: TimelineDto[];
 
-    this.timeLineService
-      .get()
-      .subscribe((data: TimeLineDto[]) => {
-        console.log(data);
-
-        this.timelines = data;
-      });
+  constructor() {
+    
   }
+
+  ngAfterContentInit(): void {
+    this.timelines = this.wedding?.timelines;
+  }
+
+
 }

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { EventDto, WeddingResponseDto } from '../core/dtos/wedding-response.dto';
 
 @Component({
   selector: 'app-events',
@@ -7,4 +8,5 @@ import { Component } from '@angular/core';
 })
 export class EventsComponent {
 
+  @Input() wedding!: WeddingResponseDto;
 }

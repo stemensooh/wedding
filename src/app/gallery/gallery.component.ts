@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { GalleryDto, WeddingResponseDto } from '../core/dtos/wedding-response.dto';
 
 @Component({
   selector: 'app-gallery',
@@ -6,5 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./gallery.component.css']
 })
 export class GalleryComponent {
+  @Input() wedding!: WeddingResponseDto;
 
 }

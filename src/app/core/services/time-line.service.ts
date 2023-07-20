@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { TimeLineDto } from '../dtos/time-line.dto';
 import { environment } from 'src/environments/environment';
+import { TimelineDto } from '../dtos/wedding-response.dto';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +15,6 @@ export class TimeLineService {
   get() {
     const url = `${this.urlApi}/`;
     // console.log(url);
-    return this.httpCliente.get<TimeLineDto[]>(url);
+    return this.httpCliente.get<TimelineDto[]>(url);
   }
 }

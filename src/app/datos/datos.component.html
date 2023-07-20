@@ -6,12 +6,12 @@
       <div class="col-lg-4" data-animate="fadeInLeft" data-animate-delay="300">
 
         <div class="wedding-circle-image">
-          <img src="assets/wedding/images/bride.jpg" alt="">
+          <img [src]="cupler?.noviaFoto" alt="">
         </div>
         <div class="text-center">
-          <h2 class="text-colored">{{ datosNovia.valor }}</h2>
+          <h2 class="text-colored">{{ cupler?.noviaNombre }} {{ cupler?.noviaApellido }}</h2>
           <p>
-            {{ datosNovia.descripcion }}
+            {{ cupler?.noviaDescripcion }}
           </p>
         </div>
       </div>
@@ -27,12 +27,12 @@
       </div>
       <div class="col-lg-4" data-animate="fadeInRight" data-animate-delay="300">
         <div class="wedding-circle-image">
-          <img src="assets/wedding/images/groom.jpg" alt="">
+          <img [src]="cupler?.novioFoto" alt="">
         </div>
         <div class="text-center">
-          <h2 class="text-colored">{{ datosNovio.valor }}</h2>
+          <h2 class="text-colored">{{ cupler?.novioNombre }} {{ cupler?.novioApellido }}</h2>
           <p>
-            {{ datosNovio.descripcion }}
+            {{ cupler?.novioDescripcion }}
           </p>
         </div>
       </div>

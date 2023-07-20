@@ -11,13 +11,16 @@ import { MapsComponent } from './maps/maps.component';
 import { ReservationComponent } from './reservation/reservation.component';
 import { FooterComponent } from './footer/footer.component';
 import { TimelineComponent } from './timeline/timeline.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgbCarousel, NgbCarouselConfig, NgbCarouselModule, NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ParametrosService } from './core/services/parametros.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { GalleryService } from './core/services/gallery.service';
 import { SliderService } from './core/services/slider.service';
 import { TimeLineService } from './core/services/time-line.service';
 import { WeddingService } from './core/services/wedding.service';
+import { WeddingComponent } from './wedding/wedding.component';
+import { AppRoutingModule } from './app-routing.module';
+import { CuplerPipe } from './core/pipes/cupler.pipe';
 
 @NgModule({
   declarations: [
@@ -30,19 +33,24 @@ import { WeddingService } from './core/services/wedding.service';
     MapsComponent,
     ReservationComponent,
     FooterComponent,
-    TimelineComponent
+    TimelineComponent,
+    WeddingComponent,
+    CuplerPipe
   ],
   imports: [
     BrowserModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule,
+    NgbCarouselModule
   ],
   providers: [
     ParametrosService,
     GalleryService,
     SliderService,
     TimeLineService,
-    WeddingService
+    WeddingService,
+    NgbCarouselConfig
   ],
   bootstrap: [AppComponent]
 })
