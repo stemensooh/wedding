@@ -21,6 +21,7 @@ import { WeddingService } from './core/services/wedding.service';
 import { WeddingComponent } from './wedding/wedding.component';
 import { AppRoutingModule } from './app-routing.module';
 import { CuplerPipe } from './core/pipes/cupler.pipe';
+import { GoogleMapsModule  } from '@angular/google-maps';
 
 @NgModule({
   declarations: [
@@ -39,10 +40,12 @@ import { CuplerPipe } from './core/pipes/cupler.pipe';
   ],
   imports: [
     BrowserModule,
+    GoogleMapsModule,
     NgbModule,
     HttpClientModule,
     AppRoutingModule,
-    NgbCarouselModule
+    NgbCarouselModule,
+    
   ],
   providers: [
     ParametrosService,
@@ -50,7 +53,8 @@ import { CuplerPipe } from './core/pipes/cupler.pipe';
     SliderService,
     TimeLineService,
     WeddingService,
-    NgbCarouselConfig
+    NgbCarouselConfig,
+    
   ],
   bootstrap: [AppComponent]
 })

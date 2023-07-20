@@ -71,7 +71,8 @@ export class WeddingResponseDto {
     _id!: string
     weddingId!: string
     descripcion!: string
-    coordenadas!: string
+    lat!: number
+    lng!: number
     mensaje!: string
     createdAt!: string
     __v!: number

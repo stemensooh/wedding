@@ -1,14 +1,31 @@
-<section id="section6"
+<section id="section6" *ngFor="let mapa of mapas"
     style="background-image:url(assets/wedding/images/shape-left-top.png); background-position:top left; background-repeat:no-repeat;">
     <div class="container">
         <div class="heading-text text-center">
-            <h2 class="m-b-30">Our Wedding Location</h2>
-            <p class="lead text-colored">Our Wedding Ceremony is scheduled at place at 20:00, Friday, Jun, 2015
+            <h2 class="m-b-30">
+                {{mapa.mensaje}}
+            </h2>
+            <p class="lead text-colored">
+                {{mapa.descripcion}}
             </p>
         </div>
         <!-- Google Map -->
-        <div class="map" data-latitude="-37.817240" data-longitude="144.955826" data-style="light"
-            data-info="Hello from &lt;br&gt; Inspiro Themes"></div>
+        <google-map 
+        [width]="'auto'" 
+        [options]="{
+            center: {
+                lat: mapa.lat,
+                lng: mapa.lng
+                },
+            }">
+            <map-marker 
+            [position]="{
+                lat: mapa.lat,
+                lng: mapa.lng
+            }"
+            [options]="optionsMarket">
+            </map-marker>
+        </google-map>
         <!-- end: Google Map -->
     </div>
 </section>
